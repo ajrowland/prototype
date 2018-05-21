@@ -34,4 +34,6 @@ msbuild.wrn
 .vs/
 
 node_modules
-dist
+wwwroot
+Pages/_Layout.cshtml
+
