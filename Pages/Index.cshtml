@@ -4,3 +4,5 @@
     ViewData["Title"] = "Home page";
 }
 
+@Html.Partial("Blocks/TestBlock.cshtml", new TestBlock(){Message = "From callee"})
+@Html.Partial("Blocks/TestBlock.cshtml", new TestBlock(){})

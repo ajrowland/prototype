@@ -6,10 +6,10 @@
   "scripts": {
     "dev": "webpack --mode development --color --watch",
     "build": "webpack --mode production",
-    "build:dev": "SET NODE_ENV=development && dotnet run",
+    "build:dev": "SET NODE_ENV=development && dotnet watch run",
     "watch": "watch 'npm run build:dev' -p=node_modules|Bin|Obj|lib -d",
     "start": "npm run build:dev && npm run watch",
-    "serve": "npm-run-all --parallel dev start"
+    "serve": "npm-run-all --parallel dev build:dev"
   },
   "keywords": [],
   "author": "",
