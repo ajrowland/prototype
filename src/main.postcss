@@ -1,0 +1,41 @@
+@import-normalize;
+
+:root {
+  --colorOrange: #f98a09;
+}
+
+@custom-media --medium-viewport (max-width: 768px);
+
+body {
+	background: var(--colorOrange);
+	line-height: 2;
+  box-shadow: 10px 10px 8px #888888;
+}
+
+/* #region test item */
+
+@media screen and (--medium-viewport) {
+  .foo {
+    width: 100%;
+  }
+}
+
+.bar {
+  width: 160px;
+
+  & span {
+    color: color(red alpha(-10%));
+  }
+
+  @nest span & {
+    color: color(blue blackness(80%));
+  }
+}
+
+/* #endregion */
+
+@media screen and (--medium-viewport) {
+  .bar {
+    width: 384px;
+  }
+}
