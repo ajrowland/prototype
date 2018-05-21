@@ -4,8 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development",
-    "build": "webpack --mode production"
+    "dev": "webpack --mode development --color --watch",
+    "build": "webpack --mode production",
+    "build:dev": "SET NODE_ENV=development && dotnet run",
+    "watch": "watch 'npm run build:dev' -p=node_modules|Bin|Obj|lib -d",
+    "start": "npm run build:dev && npm run watch",
+    "serve": "npm-run-all --parallel dev start"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +28,7 @@
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.11",
     "css-mqpacker": "^6.0.2",
     "file-loader": "^1.1.11",
@@ -32,6 +37,7 @@
     "img-loader": "^3.0.0",
     "mini-css-extract-plugin": "^0.4.0",
     "node-sass": "^4.9.0",
+    "npm-run-all": "^4.1.3",
     "postcss-cssnext": "^3.1.0",
     "postcss-loader": "^2.1.5",
     "postcss-normalize": "^4.0.0",
