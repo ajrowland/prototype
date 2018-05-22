@@ -1,3 +1,0 @@
-import style from "./main.postcss";
-
-console.log(`I'm a silly entry point`);
