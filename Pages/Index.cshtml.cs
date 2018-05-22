@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace webpack_4_quickstart.Pages
+namespace Prototype.Pages
 {
     public class IndexModel : PageModel
     {

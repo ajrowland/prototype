@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace webpack_4_quickstart.Pages
+namespace Prototype.Pages
 {
     public class ContactModel : PageModel
     {
